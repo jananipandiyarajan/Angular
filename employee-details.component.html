@@ -1,0 +1,23 @@
+<H1 align="center">EMPLOYEE DETAILS</H1>
+<table border ="3">
+<tr>
+    <th>EmployeeId</th>
+    <th>FullName</th>
+    <th>EmailId</th>
+    <th>MobileNum</th>
+    <th>DateOfJoining</th>
+    <th>Department</th>
+    <th>LeaveBalance</th>
+</tr>
+
+
+<tr>
+    <td>{{(employeeFound | async)?.empId}}</td>
+    <td>{{(employeeFound | async)?.fullName}}</td>
+    <td>{{(employeeFound | async)?.emailId}}</td>
+    <td>{{(employeeFound | async)?.mobNo}}</td>
+    <td>{{(employeeFound | async)?.doj}}</td>
+    <td>{{(employeeFound | async)?.empDpt}}</td>
+    <td>{{(employeeFound | async)?.leaveBal}}</td>
+</tr>
+</table>

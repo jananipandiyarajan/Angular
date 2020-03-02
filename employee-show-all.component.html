@@ -1,0 +1,25 @@
+<p>employee-show-all works!</p>
+<table border = "3">
+<tr>
+    <th>EmployeeId</th>
+    <th>FullName</th>
+    <th>EmailId</th>
+    <th>MobileNum</th>
+    <th>DateOfJoining</th>
+    <th>Department</th>
+    <th>LeaveBalance</th>
+    <th>ManagerId</th>
+    <th>Login</th>
+</tr>
+<tr *ngFor = "let e of emps | async">
+    <td>{{e.empId}}</td>
+    <td>{{e.fullName}}</td>
+    <td>{{e.emailId}}</td>
+    <td>{{e.mobNo}}</td>
+    <td>{{e.doj}}</td>
+    <td>{{e.empDpt}}</td>
+    <td>{{e.leaveBal}}</td>
+    <td>{{e.mgrId}}</td>
+    <td><input type="button" value="login" (click) = "show(e.empId,e.mgrId)"/></td>
+</tr>
+</table>

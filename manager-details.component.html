@@ -1,0 +1,15 @@
+<H1 align="center">MANAGER DETAILS</H1>
+<table border ="3">
+<tr>
+    <th>EmployeeId</th>
+    <th>FullName</th>
+    <th>EmailId</th>
+    <th>MobileNum</th>
+</tr>
+<tr>
+    <td>{{(managerFound | async)?.empId}}</td>
+    <td>{{(managerFound | async)?.fullName}}</td>
+    <td>{{(managerFound | async)?.emailId}}</td>
+    <td>{{(managerFound | async)?.mobNo}}</td>
+</tr>
+</table>

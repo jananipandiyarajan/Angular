@@ -1,0 +1,56 @@
+<h3 align = "center" Approve-Deny Leaves></h3>
+<form align = "center">
+    <div style = "float : left; width:50%">
+        Employee ID:
+        {{employee.empId}}<br/><br/>
+        Employee Name:
+        {{ (employeeFound | async)?.fullName}} <br/><br/>
+        Leave Balance:
+        {{ (employeeFound | async)?.leaveBal}} <br/><br/>
+    </div>
+    <div style = "float : right; width:50%">
+        Leave Id:
+        {{this.leave.leaveId}}<br/><br/>
+        Start date:
+        {{ (leaveFound | async)?.startDate}} <br/><br/>
+        End Date:
+        {{ (leaveFound | async)?.endDate}} <br/><br/>
+        No.of Days:
+        {{ (leaveFound | async)?.numOfDays}} <br/><br/>
+        Leave Type:
+        {{ (leaveFound | async)?.leaveType}} <br/><br/>
+        Leave Reason:
+        {{ (leaveFound | async)?.leaveReason}} <br/><br/>
+
+    </div>
+</form>
+<div style = "text-align : center;">
+    <body>
+    <b align = "center">Manager Comment :</b>
+    <input type = "text" name = "Manager Comment" [(ngModel)] = "leave.managerComment"/><br/><br/>
+    <input type = "button" value = "Approve Leave" (click)="approveLeave()"/><br/><br/>
+    <input type ="button" value = "Deny Leave" (click) = "denyLeave()" /><br/><br/>
+    <div align = "center">
+        <b>result is :{{result}}</b>
+    </div>
+    </body>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

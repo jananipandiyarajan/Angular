@@ -1,0 +1,50 @@
+<h2>Pending Leaves</h2>
+
+ <table border = "3" >
+
+     <tr *ngFor = "let m of emp | async">
+
+        <div *ngIf = "m.mgrId == empId">
+            <th> Employee Id : </th>
+            <td>{{m.empId}}</td>
+            <th> FullName : </th>
+            <td>{{m.fullName}}</td>
+            <th> AvailableLeaveBalance : </th>
+            <td>{{m.leaveBal}}</td>
+            
+                    
+    <tr>
+        <th width = "70"> LeaveId</th>
+        <th> EmployeeId</th>
+        <th> NumOfDays</th>
+        <th width = "120">StartDate </th>
+        <th> EndDate</th>
+        <th> LeaveType</th>
+        <th> LeaveStatus</th>
+        <th> LeaveReason</th>
+        <th width = "100">AppliedOn</th>
+        <th> ManagerComment</th>
+    </tr>
+        </div>
+
+    <table class = "table table-striped table-dark" >
+    <tr *ngFor = "let p of Pend | async" (click) = "setClickrow(p.lid, m.empId)" onclick = "this.value">
+            <div *ngIf = "m.empId == p.empId" rowspan = 200px>
+                <td width = "70">{{p.leaveId}}</td>
+                <td width = "90">{{p.empId}}</td>
+                <td width = "100">{{p.numOfDays}}</td>
+                <td width = "150">{{p.startDate}}</td>
+                <td width = "150">{{p.endDate}}</td>
+                <td width = "90">{{p.leaveType}}</td>
+                <td width = "90">{{p.leaveStatus}}</td>
+                <td width = "80">{{p.leaveReason}}</td>
+                <td width = "100">{{p.appliedOn}}</td>
+                <td width = "100">{{p.managerComment}}</td>
+    
+            </div>
+    </tr>
+</table>
+     </tr>
+ </table>
+
+
